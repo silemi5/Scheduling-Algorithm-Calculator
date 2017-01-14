@@ -1,8 +1,7 @@
 <?php
-    if(isset($_POST['process']) && isset($_POST['algo']))
+    if(isset($_POST['process']))
     {
-        $processes = $_POST['process'];
-        $algo = $_POST['algo'];
+        $process = $_POST['process'];
     }
     else
         exit("Error!");
@@ -15,6 +14,8 @@
         <title>Document</title>
     </head>
     <body>
-        
+        <?php
+            print($process);
+        ?>
     </body>
 </html>
