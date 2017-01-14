@@ -8,6 +8,17 @@
         <form action="">
             Processes:
             <input type="number" min="1" name="process" value="2"><br>
+            Algorithm:
+            <select name="algo">
+                <option value="FCFS">First come, first serve (NP)</option>
+                <option value="SJF">Shortest Job First (NP)</option>
+                <option value="SRTF">Shortest Remaining Time First (P)</option>
+                <option value="PSA1">Priority Scheduling (NP)</option>
+                <option value="PSA2">Priority Scheduling (P)</option>
+                <option value="RSA">Robin Scheduling (NP)</option>
+            </select><br>
+
+            <input type="submit">
 
         </form>
     </body>
