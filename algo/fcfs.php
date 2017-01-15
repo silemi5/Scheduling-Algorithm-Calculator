@@ -5,8 +5,6 @@
         $AT = $_POST['AT'];
         $BT = $_POST['BT'];
         $Prio = $_POST['Prio'];
-
-        //$process = array("ProcessName", AT, BT );
     }
     else
         exit("Error!");
@@ -34,7 +32,7 @@
 
             <tbody>
                 <?php
-                    for($x = 0; $x < count($AT); $x++)
+                    for($x = 0; $x < $NumProcess; $x++)
                     {
                         print
                         ("
