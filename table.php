@@ -38,9 +38,9 @@
                                 ("
                                     <tr>
                                         <td>P" . $x . "</td>
-                                        <td><input class=\"in\" type=\"number\" name=\"AT" . $x . "\" min=\"0\"></td>
-                                        <td><input class=\"in\" type=\"number\" name=\"BT" . $x . "\" min=\"0\"></td>
-                                        <td><input class=\"prio\" type=\"number\" name=\"Pr" . $x . "\" min=\"0\"></td>                 
+                                        <td><input class=\"in\" type=\"number\" name=\"AT[]\" min=\"0\"></td>
+                                        <td><input class=\"in\" type=\"number\" name=\"BT[]\" min=\"0\"></td>
+                                        <td><input class=\"prio\" type=\"number\" name=\"Prio[]\" min=\"0\"></td>                 
                                     </tr>
                                 ");
                             }
