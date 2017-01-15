@@ -35,17 +35,13 @@
         $time += $BT[$queue[$x]];
         $CT[$queue[$x]] = $time;
     }
+    
 //calculates the TT, WT
     for($x = 0; $x < $NumProcess; $x++)
     {
         $TT[] = $CT[$x] - $AT[$x];
-    }
-
-    for($x = 0; $x < $NumProcess; $x++)
-    {
         $WT[] = $TT[$x] - $BT[$x];
     }
-    
             
 ?>
 
