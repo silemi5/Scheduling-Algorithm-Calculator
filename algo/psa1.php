@@ -12,8 +12,7 @@
     //populates the inital queue
     for($x = 0; $x < $NumProcess; $x++)
         $queue[] = $x;
-        
-    $CT[] = 0;
+        $CT[] = 0;
 
     //rearranges the queue
     for($x = 1; $x < $NumProcess; $x++)
