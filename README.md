@@ -7,7 +7,7 @@ A program coded in PHP for calculating the scheduling algorithms.
 - [X] First come, first serve
 - [X] Shortest Job First
 - [ ] Shortest Remaining Job First
-- [ ] Non-Preemptive Priority
+- [X] Non-Preemptive Priority
 - [ ] Preemptive Priority
 - [ ] Round Robin
 

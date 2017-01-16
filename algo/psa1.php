@@ -12,9 +12,9 @@
     //populates the inital queue
     for($x = 0; $x < $NumProcess; $x++)
         $queue[] = $x;
-        $CT[] = 0;
+    $CT[] = 0;
 
-    //rearranges the queue
+    //rearranges the queue by AT
     for($x = 1; $x < $NumProcess; $x++)
     {
         for ($y = 1; $y < $NumProcess; $y++)
@@ -27,6 +27,35 @@
             }
         }
     }
+
+    //arranges the queue by BT
+    for($x = 1; $x < $NumProcess; $x++)
+    {
+        for ($y = 1; $y < $NumProcess; $y++)
+        {
+            if ($y != (count($queue) - 1) && $BT[$queue[$y]] > $BT[$queue[$y + 1]])
+            {
+                $temp = $queue[$y];
+                $queue[$y] = $queue[$y + 1];
+                $queue[$y + 1] = $temp;
+            }
+        }
+    }
+
+    //arranges the queue by Prio
+    for($x = 1; $x < $NumProcess; $x++)
+    {
+        for ($y = 1; $y < $NumProcess; $y++)
+        {
+            if ($y != (count($queue) - 1) && $Prio[$queue[$y]] > $Prio[$queue[$y + 1]])
+            {
+                $temp = $queue[$y];
+                $queue[$y] = $queue[$y + 1];
+                $queue[$y + 1] = $temp;
+            }
+        }
+    }
+    
 
 //calculates the CT, TT, and WT
     $time = 0;
