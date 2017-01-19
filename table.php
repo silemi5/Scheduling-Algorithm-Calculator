@@ -47,6 +47,7 @@
                         ?>
                 </tbody>
             </table>
+            Time Quantum: <input class="in" type="number" name="TQ" min="1" value="1">
             <input type="hidden" name="process" value="<?php print($process); ?>">
             <br>
             <input type="submit">
