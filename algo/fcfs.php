@@ -28,20 +28,5 @@
             }
         }
     }
-
-//calculates the CT, TT, and WT
-    $time = 0;
-    for($x = 0; $x < $NumProcess; $x++)
-    {
-        $time += $BT[$queue[$x]];
-        $CT[$queue[$x]] = $time;
-    }
-    
-//calculates the TT, WT
-    for($x = 0; $x < $NumProcess; $x++)
-    {
-        $TT[] = $CT[$x] - $AT[$x];
-        $WT[] = $TT[$x] - $BT[$x];
-    }
     include("common.php");   
 ?>
