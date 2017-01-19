@@ -24,22 +24,32 @@
 
     for($time = 0; $time <= $MaxTime; $time++)
     {
-        if ($time > max($AT) && $time == $AT[$time] && $BTRemaining[$time] < $BTRemaining[$NowProcess])
-            $NowProcess = $AT[$time];
-        else if ($time > max($AT))
+        if($time == 2)
+        {
+            $gh = "bruh";
+        }
+        if ($time <= max($AT))
+        {
+            if ($time == $AT[$time] && $BTRemaining[$time] < $BTRemaining[$NowProcess])
+            {
+                $NowProcess = $AT[$time];
+            }
+        }
+
+        elseif ($time > max($AT))
         {
             if(min($BTRemaining) < $BTRemaining[$NowProcess])
             {
                 $NowProcess = array_search(min($BTRemaining), $BTRemaining);
             }
         }
+
         $BTRemaining[$NowProcess]--;
-        
         //If the current process has finished its work
         if($BTRemaining[$NowProcess] == 0)
         {
-            $CT[$NowProcess] = $time + 1;
-            $BTRemaining[$NowProcess] = null;
+            $CT[$NowProcess] = $time;
+            $BTRemaining[$NowProcess] = 99999;
         }
     }
     print("Testing");
